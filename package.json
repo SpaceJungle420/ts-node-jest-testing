@@ -1,0 +1,23 @@
+{
+  "name": "ts-node-jest-testing",
+  "version": "1.0.0",
+  "description": "Udemy - Unit Testing for Typescript &amp; NodeJs Developers with Jest",
+  "main": "index.js",
+  "engines": {
+    "node": "20.11.0",
+    "npm": "10.3.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.3",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
