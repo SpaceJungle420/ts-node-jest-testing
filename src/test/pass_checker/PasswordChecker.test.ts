@@ -7,7 +7,33 @@ describe("PasswordChecker test suite", () => {
     sut = new PasswordChecker();
   });
 
-  it("Should do nothing for the moment", () => {
-    sut.checkPassword();
+  it("Password with less than 8 chars is invalid", () => {
+    const actual = sut.checkPassword("1234567");
+    expect(actual).toBe(false);
+  });
+
+  it("Password with more than 8 chars is ok", () => {
+    const actual = sut.checkPassword("12345678Aa");
+    expect(actual).toBe(true);
+  });
+
+  it("Password with no upper case letter is invalid", () => {
+    const actual = sut.checkPassword("1234abcd");
+    expect(actual).toBe(false);
+  });
+
+  it("Password with upper case is valid", () => {
+    const actual = sut.checkPassword("1234567Aa");
+    expect(actual).toBe(true);
+  });
+
+  it("Password with no lower case letter is invalid", () => {
+    const actual = sut.checkPassword("1234ABCD");
+    expect(actual).toBe(false);
+  });
+
+  it("Password with lower case is valid", () => {
+    const actual = sut.checkPassword("1234ABCDa");
+    expect(actual).toBe(true);
   });
 });
