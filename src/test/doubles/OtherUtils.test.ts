@@ -5,7 +5,7 @@ import {
 } from "../../app/doubles/OtherUtils";
 
 describe("OtherUtils test suite", () => {
-  describe.only("Other strings utils tests with spies", () => {
+  describe("Other strings utils tests with spies", () => {
     let sut: OtherStringUtils;
 
     beforeEach(() => {
