@@ -1,6 +1,6 @@
-import { HTTP_METHODS } from "src/server_app/model/ServerModel";
+import { HTTP_METHODS } from "../../../../src/server_app/model/ServerModel";
 
-export class RequestTestWraper {
+export class RequestTestWrapper {
   public body: object;
   public method: HTTP_METHODS;
   public url: string;
