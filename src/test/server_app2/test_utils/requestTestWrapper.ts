@@ -1,10 +1,12 @@
-import { HTTP_METHODS } from "../../../../src/server_app/model/ServerModel";
+import { HTTP_METHODS } from "../../../server_app/model/ServerModel";
 
 export class RequestTestWrapper {
   public body: object;
   public method: HTTP_METHODS;
   public url: string;
-  public headers = {};
+  public headers: Record<string, string> = {
+    "user-agent": "jest-test-agent",
+  };
 
   public on(event, cb) {
     if (event == "data") {
@@ -18,6 +20,8 @@ export class RequestTestWrapper {
     this.body = undefined;
     this.method = undefined;
     this.url = undefined;
-    this.headers = undefined;
+    this.headers = {
+      "user-agent": "jest-test-agent",
+    };
   }
 }
