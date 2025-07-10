@@ -23,7 +23,7 @@ export class Server {
       await this.handleRequest(req, res);
       res.end();
       console.log("times called res.end: ");
-      console.log((res.end as any as jest.Mock).mock.calls.length);
+      // console.log((res.end as any as jest.Mock).mock.calls.length);
     });
     this.server.listen(8080);
     console.log("server started");
@@ -86,7 +86,7 @@ export class Server {
           if (err) {
             reject(err);
           } else {
-            console.log("server closed");
+            // console.log("server closed");
             resolve();
           }
         });
