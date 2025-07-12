@@ -28,7 +28,6 @@ function ParentCounter() {
   return (
     <div style={{ border: "1px dashed blue" }}>
       <button onClick={handleClickIncrement}>Increment parent counter</button>
-
       <ChildCounter parentCounter={parentCounter} />
     </div>
   );
